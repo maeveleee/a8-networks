@@ -34,8 +34,12 @@ def make_http_request(ip, port):
 # (This variable is defined at the top of this file if you want to play with it)
 #
 # Hint: This is meant for you to use Google to figure out.
+ip = socket.gethostbyname(hostname)
+port = 80  
 
 # Next, call make_http_request with the correct parameters and then print the response
 # This response should look a lot like the in-class example of "curl", and start with
 # "HTTP/1.1 200 OK". Rememeber, we're making an HTTP request, so from that you should
 # be able to figure out what port to use.
+response = make_http_request(ip, port)
+print(response)  
